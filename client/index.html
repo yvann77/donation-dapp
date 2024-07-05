@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp de Don en Cryptomonnaie</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        input, button { margin: 10px 0; }
+        #error, #success { display: none; padding: 10px; margin-top: 10px; }
+        #error { background-color: #ffcccc; }
+        #success { background-color: #ccffcc; }
+    </style>
+</head>
+<body>
+    <h1>DApp de Don en Cryptomonnaie</h1>
+    <input type="number" id="donationAmount" placeholder="Montant en ETH" step="0.01" min="0.01">
+    <button onclick="createDonation()">Faire un don</button>
+    <div id="error"></div>
+    <div id="success"></div>
+    <h2>Total des dons</h2>
+    <p id="totalDonations">0 ETH</p>
+    <h2>Liste des dons</h2>
+    <div id="donations"></div>
+</body>
+</html>
